@@ -50,6 +50,7 @@ JD가 있으면 이력서·포트폴리오 제작 전에 **필수요건·주요�
 - [지원자 사전 질문지](templates/CANDIDATE-INTAKE.md): 경력·직무와 관계없이 사용하는 기본 입력. [학생용 보조 질문지](templates/STUDENT-INTAKE.md), [프로젝트 README](templates/PROJECT-README.md)는 해당할 때 사용합니다.
 - [포트폴리오 HTML](skills/html-pdf-portfolio/assets/portfolio.html): 표지·Summary·회사/프로젝트 간지·핵심 성과·수상·학력/역량·채용 가치 마무리의 18페이지 작성 예시. [챕터 구성 지침](skills/html-pdf-portfolio/references/chapter-structure.md)에 따라 없는 항목은 삭제하고 실제 사례량에 맞춥니다.
 - [포트폴리오 디자인 첨삭 기준](skills/html-pdf-portfolio/references/design-review.md): 밝은 배경·큰 결론·실제 근거·선택적 벤토 구성. `design-taste-frontend`의 문서에 맞는 원칙을 적용하며 해당 스킬이 없어도 사용할 수 있습니다.
+- [프로젝트 한 페이지 기준](skills/html-pdf-portfolio/references/project-onepager.md): **검증된 성과를 먼저 보여주는 명사형 제목**, 회사→프로젝트 계층, 문제·내 역할 / 해결·판단 / 성과·조건을 정리합니다. 실제 이미지 비율·가독성에 맞춰 왼쪽·오른쪽·가운데 전체 너비 배치를 선택합니다.
 - [A4 포스터 HTML](skills/academic-a4-poster/assets/poster.html): 2열 구조의 학술형 초안.
 - [템플릿 PDF 예시](examples/): 실제 지원자 실적이 아닌 구조·출력 확인용입니다.
 - [미니 실험 가이드](MINI-PROJECTS.md): 로봇·자율주행 학습자에게 맞는 선택형 보완 과제입니다. 모든 직무·경력자가 수행할 필수 단계가 아닙니다.
