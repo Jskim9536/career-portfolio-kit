@@ -2,6 +2,10 @@
 
 본문은 HTML 정본 하나에서 편집한다. 템플릿의 `section.slide`가 PDF 한 페이지다. 각 페이지 안에 제목·본문·근거·출처를 두고 바닥 여백을 확보한다.
 
+[디자인 첨삭 지침](design-review.md)의 타이포그래피·배경·벤토·검수 기준을 함께 적용한다. 템플릿에는 Pretendard Variable, 제목 60px(표지 72px), 본문 28px, 보조 22px, 캡션 18px이 실제 CSS로 적용돼 있다. 검증된 수치가 있을 때만 64~88px로 강조하고 지표·단위·조건을 함께 표시한다.
+
+`python3 tools/prepare_documents.py output/application/v1 --kind portfolio`로 HTML과 폰트·라이선스를 준비한다. `assets/fonts/`를 함께 유지하고 실제 폰트 로드가 끝난 뒤 출력한다. 템플릿을 직접 열 때는 저장소의 공용 폰트를, 개인 출력본은 복사된 상대 경로의 폰트를 읽는다.
+
 ```css
 .slide { width:1600px; height:900px; min-width:1600px; min-height:900px; container-type:size; }
 @page { size:16.666667in 9.375in; margin:0; }

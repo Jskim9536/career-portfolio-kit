@@ -1,20 +1,20 @@
 ---
 name: student-project-portfolio
-description: Help university students turn existing engineering projects into evidence-based GitHub READMEs, portfolio slide outlines, and technical posts. Use for student portfolio mentoring, project contribution reviews, and small evidence-gap experiments; do not invent career achievements or treat an outline as an exported presentation.
+description: Help candidates at any career stage turn work, business, research, or student projects into evidence-based experience summaries and portfolio outlines, with READMEs or technical posts when relevant. Use for contribution reviews and mentoring; do not invent achievements or present outlines as exported files.
 ---
 
-# Student Project Portfolio
+# Project Experience Portfolio
 
-학생의 실제 프로젝트를 채용 담당자·멘토가 이해하고 확인할 수 있게 정리한다. 특정 사용자의 이력·회사·개인 자산 경로를 전제하지 않는다. 사용자 언어와 목표 직무에 맞춰 작성한다.
+지원자의 실제 업무·프로젝트·연구 경험을 채용 담당자·검토자가 이해하고 확인할 수 있게 정리한다. 첫 취업·이직·경력 전환 모두 지원한다. 폴더명은 기존 링크 호환을 위해 유지한다. 특정 사용자의 이력·회사·개인 자산 경로를 전제하지 않으며 사용자 언어와 목표 직무에 맞춰 작성한다. 코드가 없는 직무에는 GitHub나 기술 실험을 강제하지 않는다.
 
 ## 시작 입력
 
 먼저 제공된 자료에서 다음을 찾는다. 핵심 정보가 없으면 관련 질문을 묶어 묻되 독립적으로 할 수 있는 자료 목록화·초안은 진행한다.
 
 - 희망 직무, 제출 대상, 마감, 필요한 형식과 분량.
-- 프로젝트 코드·기존 문서·실험 결과·화면·데모·출처.
-- 프로젝트 기간, 팀 규모, 학생 본인의 역할과 담당 부분.
-- 현재 실행 가능한 환경과 실제 검증 범위.
+- 경력 기록·기획·디자인·분석·운영 자료·연구·코드·기존 문서·결과·화면·출처.
+- 업무·프로젝트 기간, 팀 규모, 본인의 실제 역할과 담당 부분.
+- 결과·운영·검증 범위, 소프트웨어 작업이면 현재 실행 가능한 환경.
 - 적용할 평가표와 추가 실험에 쓸 수 있는 시간.
 
 ## JD가 있는 포트폴리오의 작성 전 단계
@@ -34,6 +34,7 @@ JD 기반 포트폴리오·발표 구성 요청이면 [공유 JD 기준](../jd-a
 요청한 산출물에만 필요한 작업을 한다. 기본 내용 구성은 다음과 같으며 주최 측 형식·사용자 지시가 있으면 조정한다.
 
 - **README:** 프로젝트 한 문장, 대표 결과, 문제·목표, 입력·처리·출력, 기술 선택, 본인 기여, 재현법, 조건별 결과, 실패·한계, 출처와 관련 링크.
+- **업무 경험 설명:** 맥락·문제·본인 책임·판단·실행·산출물/성과·근거·한계를 정리한다. 기획·영업·마케팅·운영 등은 실제 업무 산출물을 사용하고 코드·실험 대신 확인 가능한 기록을 연결한다.
 - **발표:** 희망 직무와 대표 경험을 연결하고, 대표 사례를 문제 → 구조 → 판단·기여 → 검증 → 실패·한계 → 활용 가능성으로 설명한다. 각 장에 핵심 주장·시각 근거·출처·발표 메모를 배치한다.
 - **기술블로그:** 기술적 질문 하나를 고르고, 선택 이유·조건·구현 또는 분석·결과·한계·재현 링크를 설명한다.
 - **첨삭:** 가장 약한 주장과 부족한 근거를 짚고, 수정 우선순위 최대 3개와 각 완료 기준을 남긴다. 평가표가 있다면 항목별 근거를 함께 기록한다.
@@ -46,6 +47,6 @@ Markdown 내용 설계, HTML, PDF, 편집 가능한 PPTX는 별도 산출물이�
 
 발표는 읽기 쉬운 글꼴·대비·여백, 장별 핵심 시각 자료 하나를 우선한다. 그림에는 무엇을 증명하는지 설명하고 그래프에는 축·단위·조건을 둔다. 자료 출처와 클릭 가능한 링크를 보존한다.
 
-최종 확인에서는 README·슬라이드·블로그의 수치·역할·기간·검증 범위가 같은지 대조한다. 실행하지 못한 코드, 확인하지 못한 링크, 미완성 실험을 명시한다. 파일을 만들었다면 위치와 실제 형식을 전달한다. 학생이 직접 실행하거나 설명하지 못한 내용을 검증 완료로 표시하지 않는다.
+최종 확인에서는 경험 설명·README·슬라이드·블로그의 수치·역할·기간·검증 범위가 같은지 대조한다. 실행하지 못한 코드, 확인하지 못한 링크, 미완성 실험을 명시한다. 파일을 만들었다면 위치와 실제 형식을 전달한다. 본인이 직접 수행하거나 설명하지 못한 내용을 검증 완료로 표시하지 않는다.
 
 기존 프로젝트 보완을 우선하며, 소재가 없을 때만 시간·환경에 맞는 작은 비교 실험을 제안한다. 이 스킬의 사용은 도구 설치·외부 공개·지원서 제출을 자동으로 승인하지 않는다.

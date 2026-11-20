@@ -13,7 +13,7 @@ description: Create evidence-based Korean and English A4 resumes together, each 
 
 작업용 근거표에 `주장 / 기간·역할 / 개인 기여 / 결과·조건 / 출처 / 확인됨·본인 진술·목표·미확인`을 기록한다. 팀 성과와 개인 기여, 기존 오픈소스와 직접 구현, 실제 장비와 시뮬레이션을 구분한다. 코드 존재를 실행 성공으로 간주하지 않는다. 숫자·고객·직함·기간·숙련도를 만들지 않는다. 검증하지 못한 필수 사실은 보수적으로 표현하거나 초안의 누락 목록에 남기며, 근거표와 내부 QA 메모를 제출용 본문에 넣지 않는다.
 
-공개 키트에는 개인 경력 DB·연락처·실적·로컬 경로를 포함하지 않는다. 학생의 실제 이력서는 허가된 개인 출력 폴더에 저장한다. 이 스킬 자체는 저장소 공개, 지원서 제출, 이메일 발송을 승인하지 않는다.
+공개 키트에는 개인 경력 DB·연락처·실적·로컬 경로를 포함하지 않는다. 지원자의 실제 이력서는 허가된 개인 출력 폴더에 저장한다. 이 스킬 자체는 저장소 공개, 지원서 제출, 이메일 발송을 승인하지 않는다.
 
 ## 작성 전: JD 기준과 인수조건
 
@@ -34,12 +34,12 @@ JD가 있으면 본문 작성 전에 [공유 JD 기준](../jd-application-review
 
 ## HTML과 PDF 동시 제작
 
-[layout-and-export.md](references/layout-and-export.md)를 읽고 [resume-ko.html](assets/resume-ko.html)과 [resume-en.html](assets/resume-en.html)을 개인 출력 폴더로 복사한다. 템플릿은 작성 안내 예시이며 실제 지원자 실적이 아니다. 두 파일의 안내와 빈칸을 실제 자료로 교체한다.
+[layout-and-export.md](references/layout-and-export.md)를 읽고 [resume-ko.html](assets/resume-ko.html)과 [resume-en.html](assets/resume-en.html)을 개인 출력 폴더로 복사한다. 저장소 루트에서 `python3 tools/prepare_documents.py output/application/v1 --kind resume`를 사용하면 두 HTML과 번들 폰트·라이선스를 함께 복사하고 상대 경로를 맞춘다. 수동 복사할 때도 폰트 자산과 경로를 함께 유지한다. 템플릿은 작성 안내 예시이며 실제 지원자 실적이 아니다. 두 파일의 안내와 빈칸을 실제 자료로 교체한다.
 
 기본 파일명은 `resume-ko.html`, `resume-ko.pdf`, `resume-en.html`, `resume-en.pdf`다. 이름·회사·버전 규칙이 있으면 네 파일에 일관되게 적용한다. 기존 지원서를 덮어쓰지 않는다.
 
 - A4 세로 210×297mm, 흰 바탕·검정/회색, 본문 한 흐름, 이름·섹션 제목·기간의 일관된 위계로 구성한다.
-- Pretendard를 우선하되 없으면 한글 지원 시스템 폰트를 사용하고 대체 사실과 출력 결과를 확인한다. 개인 컴퓨터의 절대 폰트 경로와 필수 외부 폰트 다운로드를 넣지 않는다.
+- [번들 Pretendard](../../assets/fonts/README.md)를 `@font-face`와 상대 경로로 로드한다. 폰트 설치·CDN 연결을 요구하지 않는다. 실제 로드를 확인하고 `document.fonts.ready` 이후 출력한다. 번들 파일이 없는 환경만 한글 지원 시스템 폰트로 대체하고 그 사실을 알린다. 개인 컴퓨터의 절대 폰트 경로를 넣지 않는다.
 - 본문 10pt, 좌우 약 16mm 여백을 시작점으로 삼는다. 글자 축소나 잘라내기로 분량을 맞추지 않고 중복 문구를 줄이거나 페이지를 추가한다.
 - 읽을 수 있는 HTML 텍스트와 실제 `a href` 링크를 사용한다. 이미지로 본문을 만들지 않는다. 각 언어의 HTML을 Chromium으로 각각 출력해 같은 내용의 PDF를 만든다.
 

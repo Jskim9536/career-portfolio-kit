@@ -1,11 +1,11 @@
 ---
 name: academic-a4-poster
-description: Turn a student's engineering or research project into an A4 academic-style poster with evidence-based copy, reference-informed design, focused questions for missing content, editable HTML, and a checked one-page PDF. Use for research posters and industry-exchange poster drafts, not event advertising or invented research results.
+description: Turn engineering or research work into an A4 academic-style poster with evidence-based copy, reference-informed design, editable HTML, and a checked one-page PDF. Use for students, practitioners, and researchers preparing research or industry-exchange posters, not advertising or invented results.
 ---
 
 # Academic A4 Poster
 
-학생의 실제 프로젝트를 학회 발표처럼 읽히는 A4 포스터로 구성한다. 기본 산출물은 편집 가능한 HTML과 A4 1페이지 PDF다. 초안도 실제 검증 상태와 누락 항목을 드러내야 한다.
+지원자·실무자·연구자의 실제 프로젝트를 학회 발표처럼 읽히는 A4 포스터로 구성한다. 기본 산출물은 편집 가능한 HTML과 A4 1페이지 PDF다. 초안도 실제 검증 상태와 누락 항목을 드러내야 한다.
 
 ## 1. 자료를 읽고 필요한 질문부터
 
@@ -39,7 +39,7 @@ description: Turn a student's engineering or research project into an A4 academi
 
 ## 4. HTML → PDF
 
-[poster.html](assets/poster.html)을 복사해 작성한다. 템플릿은 구조 안내용이며 실제 학생 실적이 아니다. 기본 `@page`와 캔버스는 210×297mm, 여백은 내부에 둔다. 가로 요청은 297×210mm로 함께 바꾼다. A4는 초안 규격이다. 향후 A1·A0 등 대형 출력이 필요하면 주최 측 규격을 확인하고 별도 조판한다.
+[poster.html](assets/poster.html)을 복사해 작성한다. 템플릿은 구조 안내용이며 실제 지원자 실적이 아니다. 기본 `@page`와 캔버스는 210×297mm, 여백은 내부에 둔다. 가로 요청은 297×210mm로 함께 바꾼다. A4는 초안 규격이다. 향후 A1·A0 등 대형 출력이 필요하면 주최 측 규격을 확인하고 별도 조판한다.
 
 본문 10~11pt, 캡션 약 9pt를 시작점으로 삼고 100% 출력 크기에서 확인한다. 텍스트가 넘치면 문구·중복·부차 정보를 줄인다. 글자를 무한히 줄이거나 `overflow:hidden`으로 감추지 않는다. 이미지 비율과 캡션을 보존한다. QR을 만들었다면 실제 대상 URL을 사용하고 스캔을 확인한다. 링크 미확정이면 가짜 QR 대신 요청 사항을 남긴다.
 
@@ -49,4 +49,4 @@ description: Turn a student's engineering or research project into an A4 academi
 
 PDF를 다시 열어 ① 1페이지 ② A4 실제 크기 ③ 한글·기호 ④ 잘림·겹침·읽기 순서 ⑤ 그림·축·캡션 ⑥ 링크·QR ⑦ 근거와 문구 일치를 확인한다. PDF를 이미지로 렌더링해 전체와 본문을 검사한다. 가능하면 흑백 대비도 확인한다.
 
-HTML·PDF와 함께 누락 자료·추가 질문·확인한 조건을 전달한다. 초안과 최종본을 구분한다. 파일 생성, 실행, 시각 검증 중 수행하지 못한 단계는 명시한다. 공개 저장소에는 학생 원자료와 개인정보를 자동으로 업로드하지 않는다.
+HTML·PDF와 함께 누락 자료·추가 질문·확인한 조건을 전달한다. 초안과 최종본을 구분한다. 파일 생성, 실행, 시각 검증 중 수행하지 못한 단계는 명시한다. 공개 저장소에는 지원자 원자료와 개인정보를 자동으로 업로드하지 않는다.

@@ -1,15 +1,15 @@
 ---
 name: html-pdf-portfolio
-description: Create an evidence-led student or early-career portfolio as editable fixed-canvas HTML and a matching PDF, including source inventory, contribution review, missing-content questions, and print validation. Use when HTML-to-PDF is requested; do not fabricate project results or present HTML as PPTX.
+description: Create evidence-led portfolios for first jobs, experienced hires, and career changes as editable fixed-canvas HTML and matching PDF, including JD criteria, design review, and print validation. Use across roles; do not fabricate achievements or present HTML as PPTX.
 ---
 
 # HTML PDF Portfolio
 
-실제 프로젝트 자료를 근거로 수정 가능한 HTML과 PDF 포트폴리오를 만든다. 특정 개인의 이력·회사·경로에 의존하지 않는다.
+실제 업무·프로젝트·연구 자료를 근거로 수정 가능한 HTML과 PDF 포트폴리오를 만든다. 첫 취업·이직·경력 전환 모두 지원하며 특정 개인의 이력·회사·경로에 의존하지 않는다. 기획·디자인·마케팅·영업·운영·개발 등 직무에 맞는 근거를 사용한다.
 
 ## 자료와 질문
 
-먼저 코드·README·기존 포트폴리오·로그·이미지를 읽어 프로젝트 목록과 근거를 정리한다. 희망 직무, 제출 조건, 본인 역할, 결과, 누락 자료를 확인한다. 자료에서 답을 찾을 수 없는 중요한 질문만 최대 3개로 묶어 묻는다. 사용자 답이 필요한 주장·저자명·역할은 확정하지 않는다. 답을 기다리는 동안 근거 목록과 문서 구조를 만든다.
+먼저 경력 기록·기획서·분석·디자인·운영 결과·연구·코드·README·기존 포트폴리오·이미지 등 제공 자료를 읽어 경험 목록과 근거를 정리한다. 희망 직무, 제출 조건, 본인 역할, 결과, 누락 자료를 확인한다. 코드·GitHub·실험이 없는 직무에 이를 강제하지 않는다. 자료에서 답을 찾을 수 없는 중요한 질문만 최대 3개로 묶어 묻는다. 사용자 답이 필요한 주장·저자명·역할은 확정하지 않는다. 답을 기다리는 동안 근거 목록과 문서 구조를 만든다.
 
 모든 프로젝트는 목록에 남기되, PDF는 대표 사례를 선별해 설명한다. 목표와 실측, 시뮬레이션과 실기, 팀 성과와 본인 기여를 구분한다. 수치가 없으면 미측정으로 표시하고 가장 작은 추가 측정을 제안한다. 근거가 없는 그림은 캡처 요청으로 남긴다.
 
@@ -27,14 +27,16 @@ JD가 있으면 사례·슬라이드 작성 전에 [공유 JD 기준](../jd-appl
 
 ## 구현과 출력
 
-[layout-and-export.md](references/layout-and-export.md)를 읽는다. [portfolio.html](assets/portfolio.html)은 편집용 시작 템플릿이며 학생의 실제 실적이 아니다. 복사한 뒤 내용과 자산을 교체한다.
+[design-review.md](references/design-review.md)를 읽고 핵심 결론·실제 근거·여백 중심으로 디자인을 점검한다. `design-taste-frontend`가 있으면 문서에 맞는 정보 위계·타이포그래피·색상·리디자인 원칙만 적용한다. 없어도 연결된 지침으로 작업할 수 있다. 기본은 밝고 간결한 배경이며 벤토는 필요한 정보를 묶을 때만 사용한다. 장식용 배경·카드·생성 이미지가 근거를 대체해서는 안 된다.
+
+[layout-and-export.md](references/layout-and-export.md)를 읽는다. [portfolio.html](assets/portfolio.html)은 편집용 시작 템플릿이며 실제 지원자의 실적이 아니다. `python3 tools/prepare_documents.py output/application/v1 --kind portfolio`로 복사하면 번들 폰트·라이선스와 상대 경로도 준비된다. 내용과 자산을 실제 자료로 교체한다.
 
 - 한 페이지를 1600×900 고정 좌표로 구성한다. 브라우저에서는 페이지 전체를 비율로 축소하며 내부 내용을 화면 폭에 따라 재배치하지 않는다.
-- Pretendard를 우선 사용하되 설치되지 않았으면 한글 지원 폰트로 대체하고 출력 결과를 확인한다. 외부 폰트 다운로드를 필수로 만들지 않는다.
+- [번들 Pretendard](../../assets/fonts/README.md)를 상대 경로로 로드한다. 설치·CDN 없이 사용하며 `document.fonts.ready`와 face loaded 상태를 확인한 후 출력한다. 번들 자산이 없는 환경만 대체 폰트와 실제 결과를 보고한다.
 - 이미지는 `object-fit: contain`, 링크는 실제 `a href`로 넣는다. 외부 이미지 핫링크보다 출처가 기록된 로컬 자산을 사용한다.
 - Chromium 인쇄로 같은 HTML을 PDF로 내보낸다. 텍스트·링크를 보존하고 스크린샷을 PDF로 합치지 않는다.
 
-출력 후 페이지 수·16:9 비율·링크·한글 글리프를 확인한다. 모든 페이지를 렌더링해 겹침·잘림·여백을 점검한다. 내용이 넘치면 우선 문구와 중복을 줄이고 핵심 근거 크기를 유지한다.
+출력 후 페이지 수·16:9 비율·링크·한글 글리프를 확인한다. 모든 페이지를 렌더링해 디자인 인수조건, 겹침·잘림·여백·글꼴·근거 가독성을 점검한다. 내용이 넘치면 우선 문구와 중복을 줄이고 핵심 근거 크기를 유지한다. 디자인 첨삭은 페이지·요소별 문제와 정보 전달 영향, 실제 수정과 재확인 결과를 기록한다.
 
 ## 전달
 
