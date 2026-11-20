@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Resume Writing Template</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e5e5e5; color: #222; font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif; font-size: 10pt; line-height: 1.45; }
+    .page { width: 210mm; height: 297mm; padding: 14mm 16mm 18mm; margin: 8mm auto; position: relative; background: #fff; break-after: page; }
+    .page:last-child { break-after: auto; }
+    .page-content { height: 265mm; }
+    h1 { margin: 0; font-size: 23pt; line-height: 1.1; font-weight: 700; }
+    .name-alt { margin-left: 3mm; color: #555; font-size: 10pt; font-weight: 400; }
+    .position { margin: 2mm 0 0; font-size: 11pt; font-weight: 600; }
+    .contact { margin-top: 1.4mm; padding-bottom: 2.2mm; border-bottom: 1.2pt solid #222; font-size: 9pt; color: #555; }
+    a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    h2 { margin: 4mm 0 2mm; padding-bottom: .8mm; border-bottom: .65pt solid #555; font-size: 11pt; line-height: 1.3; font-weight: 700; break-after: avoid; }
+    p { margin: 0; }
+    .competencies { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5mm; padding: 3mm; background: #f5f5f5; font-size: 9pt; }
+    .competency strong { display: block; margin-bottom: .8mm; }
+    .entry { margin-top: 3mm; break-inside: avoid; }
+    .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+    h3 { margin: 0; font-size: 10.5pt; font-weight: 400; }
+    .period { flex-shrink: 0; font-size: 9pt; color: #555; }
+    .context { margin-top: .7mm; color: #555; font-size: 9pt; }
+    ul { margin: 1.5mm 0 0; padding-left: 4.5mm; }
+    li { margin-bottom: 1.5mm; padding-left: .5mm; }
+    .compact { margin-top: 1.5mm; }
+    .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 8pt; color: #666; }
+    @media print { body { background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; } .page { margin: 0; } }
+  </style>
+</head>
+<body>
+  <!-- Writing guide only. Replace all guidance with candidate-owned evidence before submission. -->
+  <section class="page">
+    <div class="page-content">
+      <header>
+        <h1>[Full name] <span class="name-alt">[Alternate name, optional]</span></h1>
+        <p class="position">[TARGET ROLE] | [PRIMARY AREA OF WORK]</p>
+        <div class="contact">[Email] · [Phone, optional] · [GitHub link] · [Portfolio link]</div>
+      </header>
+
+      <h2>SUMMARY</h2>
+      <p>[Summarize relevant experience and scope in two or three lines. Name the work performed and the deliverables produced. Avoid unsupported seniority, expertise, or performance claims.]</p>
+
+      <h2>CORE COMPETENCIES</h2>
+      <div class="competencies">
+        <div class="competency"><strong>[COMPETENCY 1]</strong>[Specific work performed in a relevant project]</div>
+        <div class="competency"><strong>[COMPETENCY 2]</strong>[Scope of implementation, analysis, or validation]</div>
+        <div class="competency"><strong>[COMPETENCY 3]</strong>[Contribution to integration, collaboration, or operations]</div>
+      </div>
+
+      <h2>PROJECT EXPERIENCE</h2>
+      <article class="entry">
+        <div class="entry-head"><h3><strong>[Primary project]</strong> | [Your role]</h3><span class="period">[YYYY.MM–YYYY.MM]</span></div>
+        <p class="context">[Course, capstone, club, or independent project / team size / operating environment]</p>
+        <ul>
+          <li>[Start with a specific action verb. Describe the problem, constraints, and the work you performed.]</li>
+          <li>[Explain a technical choice and the change implemented. Separate existing packages from your own code.]</li>
+          <li>[State the baseline, conditions, metric, trials, and observed result. Use the actual validation scope if no metric is available.]</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-head"><h3><strong>[Supporting project]</strong> | [Your role]</h3><span class="period">[YYYY.MM–YYYY.MM]</span></div>
+        <p class="context">[Project objective and your scope of responsibility]</p>
+        <ul>
+          <li>[Describe the problem you addressed and the deliverable you produced, rather than listing technologies.]</li>
+          <li>[State verified results and their conditions, or the scope of actual use. Distinguish ongoing work.]</li>
+        </ul>
+      </article>
+
+      <h2>WORK EXPERIENCE · ACTIVITIES</h2>
+      <article class="entry">
+        <div class="entry-head"><h3><strong>[Organization]</strong> | [Actual title or role]</h3><span class="period">[YYYY.MM–YYYY.MM]</span></div>
+        <ul><li>[Describe your action and an observed result or deliverable. Remove this section if not applicable.]</li></ul>
+      </article>
+
+      <h2>EDUCATION · CREDENTIALS · AWARDS</h2>
+      <p><strong>[Institution, major, and degree]</strong> | [Status and dates]</p>
+      <p class="context">[Relevant credential or award, issuing organization, and date. Remove if not applicable.]</p>
+
+      <h2>TECHNICAL SKILLS · LANGUAGES</h2>
+      <p class="compact"><strong>[Skill category]</strong> · [Languages and tools actually used, with scope]</p>
+      <p class="compact"><strong>[Language]</strong> · [Supported proficiency or test, score, and date, if applicable]</p>
+    </div>
+    <footer class="footer"><span>Writing template · Not a real application · <a href="https://github.com/Jskim9536/career-portfolio-kit">Guide</a></span><span>1</span></footer>
+  </section>
+</body>
+</html>

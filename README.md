@@ -1,11 +1,12 @@
 # Career Portfolio Kit
 
-대학생의 커리어 준비를 돕는 공용 AI 스킬과 템플릿입니다. GitHub·README 정리, HTML 기반 PDF 포트폴리오, A4 학술 포스터 초안을 실제 프로젝트 근거로 작성합니다.
+대학생·취업 준비생의 커리어 준비를 돕는 공용 AI 스킬과 템플릿입니다. 한·영 A4 이력서, GitHub·README 정리, HTML 기반 PDF 포트폴리오, A4 학술 포스터 초안을 실제 경험과 프로젝트 근거로 작성합니다.
 
 ## 필요한 스킬 선택
 
 | 하고 싶은 일 | 스킬 | 결과 |
 |---|---|---|
+| 한·영 텍스트 중심 이력서를 만들고 PDF로 출력하기 | [html-a4-resume](skills/html-a4-resume/SKILL.md) | 한국어 HTML·PDF + 영어 HTML·PDF, 기본 4개 파일 |
 | 프로젝트와 본인 기여를 정리하고 첨삭받기 | [student-project-portfolio](skills/student-project-portfolio/SKILL.md) | 프로젝트 설명·README·보완 과제 |
 | HTML로 포트폴리오를 만들고 PDF로 출력하기 | [html-pdf-portfolio](skills/html-pdf-portfolio/SKILL.md) | 편집 HTML + 10페이지 이내 PDF |
 | 학회 발표 형태의 A4 포스터 만들기 | [academic-a4-poster](skills/academic-a4-poster/SKILL.md) | 편집 HTML + A4 1페이지 PDF 초안 |
@@ -29,6 +30,7 @@
 
 ## 템플릿과 예시
 
+- [한국어 이력서 HTML](skills/html-a4-resume/assets/resume-ko.html), [영어 이력서 HTML](skills/html-a4-resume/assets/resume-en.html): A4 세로 1페이지 시작 템플릿. 학생·신입은 1페이지, 경력자는 기본 1~2페이지로 조정합니다. 한국어는 명사형, 영어는 동사 중심 불릿으로 작성하며 두 언어의 사실을 대조합니다.
 - [프로젝트 전체 목록](templates/PROJECT-INVENTORY.md): 모든 경험을 빠짐없이 연결합니다.
 - [학생 사전 질문지](templates/STUDENT-INTAKE.md), [프로젝트 README](templates/PROJECT-README.md).
 - [포트폴리오 HTML](skills/html-pdf-portfolio/assets/portfolio.html): 8페이지 시작 템플릿. 내용에 따라 최대 10페이지로 조정합니다.
@@ -47,6 +49,8 @@ Python과 Chrome·Chromium·Edge가 있다면 자동 출력도 가능합니다. 
 ```bash
 python3 tools/export_pdf.py skills/academic-a4-poster/assets/poster.html output/poster.pdf
 python3 tools/export_pdf.py skills/html-pdf-portfolio/assets/portfolio.html output/portfolio.pdf
+python3 tools/export_pdf.py skills/html-a4-resume/assets/resume-ko.html output/resume-ko.pdf
+python3 tools/export_pdf.py skills/html-a4-resume/assets/resume-en.html output/resume-en.pdf
 ```
 
 Windows에서는 설치 환경에 따라 `python3` 대신 `python` 또는 `py`를 사용합니다. 브라우저를 찾지 못하면 `--browser`로 실행 파일 경로를 지정합니다. 기존 결과를 덮어쓸 때만 `--overwrite`를 사용합니다. 외부 웹 폰트·이미지가 있는 문서는 로드 상태를 별도로 확인하세요.
@@ -56,7 +60,11 @@ Windows에서는 설치 환경에 따라 `python3` 대신 `python` 또는 `py`�
 ```bash
 python3 tools/check_pdf.py output/poster.pdf --kind poster
 python3 tools/check_pdf.py output/portfolio.pdf --kind portfolio
+python3 tools/check_pdf.py output/resume-ko.pdf --kind resume
+python3 tools/check_pdf.py output/resume-en.pdf --kind resume
 ```
+
+이력서 스킬은 위 템플릿을 복사해 실제 자료로 편집한 **한국어 HTML·PDF와 영어 HTML·PDF를 함께 전달**합니다. 위 명령은 템플릿 출력 확인용이며 개인 이력서 작성 자체를 대신하지 않습니다. `--kind resume`는 기본 1~2페이지의 A4 세로 문서를 확인합니다. 제출 조건상 더 긴 이력서는 `--max-pages`로 한도를 지정하고, 이름 등 추출 확인은 `--require-text`, 링크 주석 확인은 `--require-uri`로 지정합니다.
 
 ## 공개 자료의 범위
 
