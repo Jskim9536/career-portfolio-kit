@@ -6,6 +6,7 @@
 
 | 하고 싶은 일 | 스킬 | 결과 |
 |---|---|---|
+| JD 기준을 세우고 작성물을 채점·검수한 뒤 2차 수정하기 | [jd-application-review](skills/jd-application-review/SKILL.md) | 고정 평가표·문서별 점수·인수조건·수정 전후 리뷰 + 갱신 HTML·PDF |
 | 한·영 텍스트 중심 이력서를 만들고 PDF로 출력하기 | [html-a4-resume](skills/html-a4-resume/SKILL.md) | 한국어 HTML·PDF + 영어 HTML·PDF, 기본 4개 파일 |
 | 프로젝트와 본인 기여를 정리하고 첨삭받기 | [student-project-portfolio](skills/student-project-portfolio/SKILL.md) | 프로젝트 설명·README·보완 과제 |
 | HTML로 포트폴리오를 만들고 PDF로 출력하기 | [html-pdf-portfolio](skills/html-pdf-portfolio/SKILL.md) | 편집 HTML + 10페이지 이내 PDF |
@@ -27,6 +28,16 @@
 5. HTML을 브라우저에서 열고 수정한 뒤 PDF로 저장합니다. 출력 PDF도 다시 확인합니다.
 
 이 저장소를 받는 것만으로 전역 스킬이 설치되지는 않습니다. 설치 없이 파일의 지침을 읽도록 요청해 사용할 수 있습니다.
+
+## JD 기준 → 작성 → 리뷰 → 2차 업데이트
+
+JD가 있으면 이력서·포트폴리오 제작 전에 **필수요건·주요업무·우대사항별 배점과 인수조건**을 만들고 같은 지원 건에서 공유합니다. 초안을 만든 뒤 리뷰 스킬이 문서별 점수와 근거를 확인하고 제작 스킬을 적용해 v2 HTML·PDF를 다시 만듭니다. 수정 전후에는 같은 평가 기준을 사용합니다.
+
+기본 배점은 필수요건 35, 주요업무 25, 우대사항 10, 개인 기여·결과 15, 전달력 10, 정보·구성 완결성 5점입니다. JD에 맞춰 작성 전에 조정하며, 기본 인수조건은 모든 문서 80점 이상·필수/주요업무 각각 75% 이상과 별도 자격·품질 게이트 충족입니다. **실제 합격 확률을 뜻하는 점수가 아닙니다.** 맞춤법·한영 일치·정본 사실 대조·기밀/개인정보·회사/직무·PDF 출력도 검수합니다. 명시 필수 자격 부족이나 확인하지 못한 사실은 높은 점수로 덮지 않습니다.
+
+리뷰·근거표는 개인 QA 폴더에 두고, 지원 문서에는 평가 점수나 내부 피드백을 넣지 않습니다. 공개 키트에는 실제 지원자 자료를 올리지 않습니다. 산식·문서 범위·파일 해시를 검산하는 `score_review.py`는 표준 라이브러리만 사용하며, 내용 판단·기밀 탐지·시각 검수를 대신하지 않습니다. [기준 작성](skills/jd-application-review/references/jd-criteria.md)과 [채점 JSON·인수조건](skills/jd-application-review/references/rubric-and-report.md)을 참고하세요.
+
+채점기 자체의 가상 자료 테스트는 `python3 -m unittest discover -s tests -v`로 실행합니다. 이 테스트 통과가 실제 지원서의 검수 완료를 뜻하지는 않습니다.
 
 ## 템플릿과 예시
 

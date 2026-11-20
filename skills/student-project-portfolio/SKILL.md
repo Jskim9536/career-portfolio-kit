@@ -17,6 +17,10 @@ description: Help university students turn existing engineering projects into ev
 - 현재 실행 가능한 환경과 실제 검증 범위.
 - 적용할 평가표와 추가 실험에 쓸 수 있는 시간.
 
+## JD가 있는 포트폴리오의 작성 전 단계
+
+JD 기반 포트폴리오·발표 구성 요청이면 [공유 JD 기준](../jd-application-review/references/jd-criteria.md)을 읽고 요건·배점·인수조건과 프로젝트 근거를 먼저 연결한다. 같은 지원 건의 기준을 재사용하고, 기준을 입증할 개인 기여·선택·실험을 우선 정리한다. JD가 없는 일반 README·블로그 작업에는 이 단계를 강제하지 않는다. [JD 리뷰·수정](../jd-application-review/SKILL.md)에서 호출됐으면 전달받은 기준을 유지해 설명과 근거를 보완하고 호출자에게 반환한다. 여기서 리뷰를 재귀 호출하지 않는다.
+
 ## 근거와 주장
 
 사용자의 제공 자료를 기준으로 주장마다 `확인됨 / 본인 진술 / 목표 / 미검증`을 구분한다. 결과·기여·직무 연관성을 작성하기 전에 [engineering-evidence.md](references/engineering-evidence.md)를 읽는다.
