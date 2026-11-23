@@ -2,6 +2,8 @@
 
 ## 시작과 설치
 
+먼저 [Mac·Windows 환경 지침](environment-and-browser.md)으로 OS·셸과 도구를 감지한다. 아래 명령은 해당 셸에 맞게 실행하며 설치·경로·PowerShell 정책 문제를 사용자에게 떠넘기지 않고 원인을 확인해 적합한 방법을 안내한다.
+
 현재 작업 폴더·Git 원격·변경 상태·기존 사이트/잠금 파일을 확인한다. 공용 키트 안에 사용자의 실제 사이트를 만들지 않는다. 사용자가 지정한 프로젝트 또는 키트 바깥의 새 폴더를 사용한다. 기존 앱을 파괴하거나 `create-next-app`으로 덮어쓰지 않는다.
 
 먼저 `node --version`, `npm --version`과 기존 package.json을 확인한다. 새 앱은 실행 시점의 [Next.js 설치 문서](https://nextjs.org/docs/app/getting-started/installation)의 Node 요구사항·현재 안정 버전을 확인하고 지원되는 Node LTS를 선택한다. Node 설치가 필요하면 [공식 다운로드](https://nodejs.org/en/download)를 안내한다. 버전 숫자를 오래 고정한 지침에 의존하지 않는다.

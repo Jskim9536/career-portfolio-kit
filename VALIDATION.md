@@ -67,3 +67,11 @@
 - `skill-creator/scripts/quick_validate.py` 형식 검사 통과. 새 스킬과 README·시작 문구의 로컬 링크 대상, 첫 글 frontmatter 타입·초안 상태·깨진 렌더 이미지 없음 확인.
 - 임시 가상환경의 PyYAML·pypdf로 검사 수행. 기존 `unittest` **34개 모두 통과**, `git diff --check` 통과. 검증 패키지는 공용 키트 의존성이나 전역 환경에 추가하지 않음.
 - 이번 결과는 재사용 스킬·참고 지침·글 템플릿이다. 실제 사용자 홈페이지 생성, Next.js 앱 빌드·브라우저 동작, Vercel 배포를 수행한 결과가 아니며 해당 검증은 스킬 적용 시 실제 사이트에서 수행해야 함. 실제 경력 자료·비공개 DB·연락처는 추가하지 않음.
+
+
+## Mac·Windows 환경 감지·Playwright 지침 보완
+
+- OS·CPU·셸·Node/npm/Git·브라우저 도구 감지, Mac/Windows 공식 설치 경로, PowerShell npm.cmd/npx.cmd 대안, WSL 환경 분리, 포트 충돌 처리를 명시. 시스템 변경과 프로젝트 내부 설치를 구분.
+- 브라우저 도구 우선 활용과 프로젝트 내부 Playwright/Chromium 준비, production webServer 설정, desktop/mobile 실제 화면 관찰·수정·재검증, 배포 URL 재확인 흐름 추가.
+- 새 환경 지침을 스킬·구현·검증 문서와 시작 문구에 연결. 스킬 형식·로컬 링크·diff 검사 통과.
+- 지침 문서 변경이며 Mac·Windows 양쪽에서 실제 앱 설치/Playwright 실행/Vercel 배포를 검증한 결과는 아님. 실제 실행 환경에서 지원 조건과 권한을 확인하고 수행 범위를 기록하도록 명시.
